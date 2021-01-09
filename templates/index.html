@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <h1>Tasks</h1>
+    <ul style="list-style-type:none;">
+        {% for todo in todos %}
+            <li><input type="checkbox"> {{ todo }}</li>
+        {% endfor %}
+    </ul>
+
+    <a href="/add">Create a New Task</a>
+{% endblock %}
